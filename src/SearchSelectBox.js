@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react';
 import cx from 'classnames';
 import _last from 'lodash/last';
 
-import SearchInput from './components/SearchInput';
-import SearchOptionsMenu from './components/SearchOptionsMenu';
-import getSuggestions from './mockServerApi';
+import SearchInput from './components/SearchBox/SearchInput';
+import SearchOptionsMenu from './components/SearchBox/SearchOptionsMenu';
+import getSuggestions from './api/mockServerApi';
 import {
   getLastWord,
   getNewSearchQuery
