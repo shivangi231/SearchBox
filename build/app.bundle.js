@@ -24031,17 +24031,6 @@ var SearchInput = function (_Component) {
   }
 
   _createClass(SearchInput, [{
-    key: 'renderClearIcon',
-    value: function renderClearIcon() {
-      var props = this.props;
-
-      return props.value && _react2.default.createElement(
-        'div',
-        { onClick: props.clearText, className: 'crossIcon' },
-        'x'
-      );
-    }
-  }, {
     key: 'render',
     value: function render() {
       var props = this.props;
@@ -24061,7 +24050,11 @@ var SearchInput = function (_Component) {
           value: props.value,
           autoFocus: props.isFocused
         }),
-        this.renderClearIcon()
+        props.value ? _react2.default.createElement(
+          'div',
+          { onClick: props.clearText, className: 'crossIcon' },
+          'x'
+        ) : ''
       );
     }
   }]);

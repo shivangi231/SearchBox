@@ -7,13 +7,6 @@ class SearchInput extends Component {
   this.props.onChange(event.target.value);
 };
 
-  renderClearIcon() {
-    const { props } = this;
-    return props.value && (
-      <div onClick={props.clearText} className="crossIcon">x</div>
-    );
-  }
-
   render() {
     const { props } = this;
     return (
@@ -30,7 +23,7 @@ class SearchInput extends Component {
           value={props.value}
           autoFocus={props.isFocused}
         />
-        {this.renderClearIcon()}
+        {props.value ? <div onClick={props.clearText} className="crossIcon">x</div> : ''}
       </div>
     );
   }
