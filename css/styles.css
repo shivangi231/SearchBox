@@ -4,7 +4,7 @@
   --search-icon-width: 20px;
   --cross-icon-width: 10px;
   --menu-border-color: #d7d7e0;
-  --option-background-color: #f6fbfd;
+  --option-background-color: #d8ffe1;
   --cross-icon-color: #82828c;
   --highlight-text-color: #598ee7;
 }
@@ -17,7 +17,9 @@ body {
 
 .search-box {
   position: relative;
-  box-shadow: 0 1px 4px rgba(119, 159, 211, 0.3), 0 0 40px rgba(133, 191, 211, 0.1);
+  -webkit-box-shadow: -1px 7px 33px 0px rgba(161,161,161,1);
+  -moz-box-shadow: -1px 7px 33px 0px rgba(161,161,161,1);
+  box-shadow: -1px 7px 33px 0px rgba(161,161,161,1);
   margin: 30px auto;
   width: var(--container-width);
   transition: all .5s;

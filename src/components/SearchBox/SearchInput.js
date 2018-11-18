@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 const SEARCH_ICON = 'https://www.shareicon.net/data/128x128/2017/06/21/887375_view_512x512.png';
 
 class SearchInput extends Component {
-  onSearchQueryChange() {
-    this.props.onChange(e.target.value);
-  };
+  onSearchQueryChange = event => {
+  this.props.onChange(event.target.value);
+};
 
   renderClearIcon() {
     const { props } = this;
@@ -26,7 +26,7 @@ class SearchInput extends Component {
           onBlur={props.onBlur}
           type="text"
           id="search-users"
-          placeholder='Search...'
+          placeholder='Search'
           value={props.value}
           autoFocus={props.isFocused}
         />

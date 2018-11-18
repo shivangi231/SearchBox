@@ -24015,17 +24015,22 @@ var SearchInput = function (_Component) {
   _inherits(SearchInput, _Component);
 
   function SearchInput() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     _classCallCheck(this, SearchInput);
 
-    return _possibleConstructorReturn(this, (SearchInput.__proto__ || Object.getPrototypeOf(SearchInput)).apply(this, arguments));
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SearchInput.__proto__ || Object.getPrototypeOf(SearchInput)).call.apply(_ref, [this].concat(args))), _this), _this.onSearchQueryChange = function (event) {
+      _this.props.onChange(event.target.value);
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(SearchInput, [{
-    key: 'onSearchQueryChange',
-    value: function onSearchQueryChange() {
-      this.props.onChange(e.target.value);
-    }
-  }, {
     key: 'renderClearIcon',
     value: function renderClearIcon() {
       var props = this.props;
@@ -24052,7 +24057,7 @@ var SearchInput = function (_Component) {
           onBlur: props.onBlur,
           type: 'text',
           id: 'search-users',
-          placeholder: 'Search...',
+          placeholder: 'Search',
           value: props.value,
           autoFocus: props.isFocused
         }),
