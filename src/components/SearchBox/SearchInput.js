@@ -1,12 +1,10 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
+const SEARCH_ICON = 'https://www.shareicon.net/data/128x128/2017/06/21/887375_view_512x512.png';
 
-const SEARCH_ICONS_URL = 'https://www.shareicon.net/download/2015/10/03/110917_search.ico';
-
-class SearchInput extends PureComponent {
-  onSearchQueryChange = event => {
-    this.props.onChange(event.target.value);
+class SearchInput extends Component {
+  onSearchQueryChange() {
+    this.props.onChange(e.target.value);
   };
 
   renderClearIcon() {
@@ -20,7 +18,7 @@ class SearchInput extends PureComponent {
     const { props } = this;
     return (
       <div className="searchInputContainer">
-        <img className="searchIcon" src={SEARCH_ICONS_URL} />
+        <img className="searchIcon" src={SEARCH_ICON} />
         <input
           className="searchInput"
           onChange={this.onSearchQueryChange}
